@@ -286,7 +286,7 @@ const MAPEL = {
 };
 /* ======================================================= */
 
-const KEY = "cbt_sesi_v1", HIST = "cbt_riwayat_v1";
+const KEY = "cbt_sesi_v2", HIST = "cbt_riwayat_v1";
 const $ = id => document.getElementById(id);
 const store = {
   get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
@@ -315,8 +315,13 @@ $("loginForm").addEventListener("submit", e => {
   const akun = AKUN.find(a => a.username===u && a.password===p);
   if(!akun) return alertMsg("Username atau kata sandi salah.");
   alertMsg("");
-  sesi = { user:u, mapel:m, idx:0, jawab:{}, selesaiPada: Date.now() + MAPEL[m].durasiMenit*60000 };
-  store.set(KEY, sesi);
+  const lama = store.get(KEY);
+  if(lama && lama.user===u && lama.mapel===m && lama.selesaiPada > Date.now()){
+    sesi = lama;                       // lanjutkan ujian yang belum diselesaikan
+  } else {
+    sesi = { user:u, mapel:m, idx:0, jawab:{}, selesaiPada: Date.now() + MAPEL[m].durasiMenit*60000 };
+    store.set(KEY, sesi);
+  }
   mulai();
 });
 
@@ -413,8 +418,8 @@ function selesai(waktuHabis){
 }
 
 /* ---------- lanjutkan sesi kalau app sempat tertutup ---------- */
-const lama = store.get(KEY);
-if(lama && MAPEL[lama.mapel]){ sesi = lama; mulai(); }
+try{ localStorage.removeItem("cbt_sesi_v1"); }catch(e){}
+// app selalu dibuka dari halaman login; ujian yang belum selesai dilanjutkan setelah login ulang
 
 /* ---------- PWA ---------- */
 if("serviceWorker" in navigator){
