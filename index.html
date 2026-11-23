@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#175a7a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>CBT SMAPA</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  @font-face{font-family:"CBT Mono";src:url(data:font/woff2;base64,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) format("woff2");font-display:block}
+  :root{
+    --red:#ee6368;
+    --primary:#0e80b3; --primary-dark:#135f88;
+    --gray:#838f99;
+    --border:#d9dcdf; --text:#212529; --muted:#6c757d;
+    --addon:#e9ecef; --input-border:#ced4da;
+    --mono: "CBT Mono", "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+    --c-red:#ec6a73; --c-yellow:#f2c56f; --c-ybtn:#edc06e; --c-blue:#1b76a8; --c-green:#22bf9c;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;height:100%}
+  body{
+    font-family: Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color:var(--text); background:#fff; font-size:16px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  button{font-family:inherit}
+  .app{max-width:520px;margin:0 auto;min-height:100%;background:#fff}
+
+  /* ===== Header ===== */
+  .hdr{
+    background:radial-gradient(ellipse 62% 165% at 50% 42%, #1f7aa6 0%, #1b6b92 24%, #175a7a 52%, #134457 80%, #113b4c 100%);
+    padding:calc(env(safe-area-inset-top) + 14px) 0 16px;
+    display:flex;justify-content:center;align-items:center;
+  }
+  .hdr img{height:70px;display:block}
+
+  .screen{display:none}
+  .screen.active{display:block}
+
+  /* ===== Login ===== */
+  .login-wrap{padding:26px 26px 40px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:4px}
+  .login-body{padding:46px 48px 28px}
+  .login-body h1{font-weight:400;font-size:29px;line-height:1.2;margin:0 0 10px}
+  .login-body p{margin:0 0 18px;font-size:15.5px;line-height:1.65}
+  .login-body p.sub{margin-bottom:22px}
+  .igrp{display:flex;height:40px;margin-bottom:14px}
+  .igrp .addon{
+    width:46px;flex:none;display:flex;align-items:center;justify-content:center;
+    background:var(--addon);border:1px solid var(--input-border);border-right:0;border-radius:3px 0 0 3px;color:#5c636a
+  }
+  .igrp .addon svg{width:17px;height:17px}
+  .igrp input,.igrp select{
+    flex:1;min-width:0;border:1px solid var(--input-border);border-radius:0 3px 3px 0;
+    padding:0 13px;font:inherit;font-size:15.5px;color:var(--text);background:#fff;outline:none;
+    -webkit-appearance:none;appearance:none
+  }
+  .igrp input::placeholder{color:#495057}
+  .igrp select.placeholder{color:#495057}
+  .igrp input:focus,.igrp select:focus{border-color:#86b7d6;box-shadow:0 0 0 3px rgba(26,118,163,.18)}
+  .alert{display:none;background:#f8d7da;border:1px solid #f1aeb5;color:#842029;border-radius:3px;font-size:13.5px;padding:7px 10px;margin:4px 0 12px}
+  .alert.show{display:block}
+  .btn-login{
+    display:block;width:100%;height:41px;margin-top:22px;border:0;border-radius:3px;color:#fff;font-size:17px;
+    background:linear-gradient(180deg,#1078a9 0%,#0c6390 50%,#0a4f78 100%);box-shadow:0 1px 2px rgba(0,0,0,.3);cursor:pointer
+  }
+  .btn-login:active{filter:brightness(.92)}
+  .refresh-link{display:block;margin:12px auto 0;background:none;border:0;font-size:16.5px;color:var(--text);cursor:pointer;padding:6px 14px}
+  .card-foot{
+    background:#f7f7f7;border-top:1px solid var(--border);text-align:center;
+    font-size:13px;line-height:1.6;color:#333;padding:12px 18px;border-radius:0 0 4px 4px
+  }
+
+  /* ===== Soal ===== */
+  .soal-wrap{padding:16px 12px 30px}
+  .soal-card{padding:20px 18px 22px}
+  .btn-daftar{
+    display:flex;align-items:center;gap:9px;margin:0 auto;height:38px;padding:0 16px;border:0;border-radius:3px;
+    background:#1b79aa;color:#fff;font-weight:700;font-size:16px;letter-spacing:.2px;cursor:pointer
+  }
+  .btn-daftar svg{width:16px;height:16px}
+  .badges{display:flex;justify-content:center;margin:10px 0 20px}
+  .badges span{height:40px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:18px;line-height:1;color:#2a2a2a;white-space:pre;letter-spacing:.5px}
+  .badge-no{background:var(--c-red);min-width:74px;padding:0 14px;border-radius:4px 0 0 4px}
+  .badge-time{background:var(--c-yellow);min-width:86px;padding:0 16px;border-radius:0 4px 4px 0}
+
+  .qcard{border:1px solid var(--border);border-radius:4px;padding:22px 20px 26px;background:#fff;min-height:330px;transition:opacity .2s}
+  .qcard.loading{opacity:.25}
+  .qtext{text-align:justify;font-size:15.5px;line-height:1.65;margin:0 0 22px}
+  .opts{list-style:none;margin:0;padding:0}
+  .opts li{display:flex;align-items:center;gap:10px;min-height:46px;cursor:pointer;font-size:15.5px;user-select:none}
+  .opts .circle{
+    width:24px;height:24px;flex:none;border-radius:50%;border:2px solid #b9b9b9;color:#9a9a9a;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;line-height:1
+  }
+  .opts li.sel .circle{background:#1d6a93;border-color:#1d6a93;color:#fff;font-weight:700}
+
+  .nav{display:flex;gap:18px;margin-top:30px}
+  .nav button{flex:1;height:40px;border:0;border-radius:4px;color:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .nav button svg{width:18px;height:18px}
+  .nav .prev{background:var(--c-blue)}
+  .nav .prev:disabled{background:var(--gray);cursor:default}
+  .nav .reload{background:var(--c-ybtn);color:#3a3a3a}
+  .nav .next{background:var(--c-blue)}
+  .nav .next.finish{background:var(--c-green)}
+
+  /* ===== Modal ===== */
+  .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:50;padding:10px;overflow:auto}
+  .backdrop.show{display:block;animation:fade .15s}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .modal{max-width:500px;margin:calc(env(safe-area-inset-top) + 4px) auto 0;background:#fff;border-radius:5px;box-shadow:0 6px 20px rgba(0,0,0,.25);animation:drop .2s ease-out}
+  @keyframes drop{from{transform:translateY(-24px)}to{transform:none}}
+  .modal-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #e5e5e5}
+  .modal-head h2{margin:0;font-size:20px;font-weight:500}
+  .modal-head .x{background:none;border:0;font-size:26px;line-height:1;color:#555;cursor:pointer;padding:0 4px}
+  .modal-body{padding:16px;font-size:15.5px;line-height:1.6}
+  .modal-body p{margin:0 0 14px}
+  .modal-body .danger{color:#e0303e;font-weight:700}
+  .modal-body .ok-text{color:#17a673;font-weight:700}
+  .modal-foot{display:flex;justify-content:flex-end;gap:8px;padding:12px 16px 14px;border-top:1px solid #e5e5e5;margin-top:24px}
+  .modal-foot button{border:0;border-radius:3px;color:#fff;font-size:16px;padding:8px 14px;cursor:pointer}
+  .btn-close{background:#5c636a}
+  .btn-ok{background:var(--c-blue)}
+
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+  .grid button{height:42px;border-radius:3px;border:1px solid var(--border);background:#fff;font-family:var(--mono);font-size:15px;color:var(--text);cursor:pointer}
+  .grid button.done{background:var(--primary);border-color:var(--primary);color:#fff}
+  .grid button.cur{outline:2px solid var(--red);outline-offset:1px}
+  .legend{display:flex;gap:16px;font-size:13px;color:var(--muted);margin-top:14px}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px;border:1px solid var(--border)}
+  .legend i.d{background:var(--primary);border-color:var(--primary)}
+  .legend i.c{outline:2px solid var(--red);outline-offset:1px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hdr"><img src="logo.png" alt="Logo SMA Negeri 4 Semarang"></header>
+
+  <!-- ========== LOGIN ========== -->
+  <section id="login" class="screen active">
+    <div class="login-wrap">
+      <div class="card">
+        <div class="login-body">
+          <h1>Selamat Datang</h1>
+          <p>Silakan login menggunakan username dan password yang anda miliki</p>
+          <p class="sub">Selamat datang di CBT SMAPA</p>
+
+          <form id="loginForm" autocomplete="off" novalidate>
+            <div class="igrp">
+              <span class="addon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span>
+              <input id="username" inputmode="numeric" placeholder="Username Peserta">
+            </div>
+            <div class="igrp">
+              <span class="addon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="12" r="3.5"/><path d="M10.5 12H21M17 12v3M20 12v2.5"/></svg></span>
+              <input id="password" type="password" placeholder="Kata Sandi Peserta">
+            </div>
+            <div class="igrp">
+              <span class="addon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 6.5C10 5 7 4.5 3 5v13c4-.5 7 0 9 1.5 2-1.5 5-2 9-1.5V5c-4-.5-7 0-9 1.5z"/><path d="M12 6.5v13"/></svg></span>
+              <select id="mapel" class="placeholder">
+                <option value="">Pilih Mata Pelajaran</option>
+              </select>
+            </div>
+            <div id="loginAlert" class="alert"></div>
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+          <button class="refresh-link" onclick="location.reload()">Refresh</button>
+        </div>
+        <div class="card-foot">Aplikasi Ujian Online. Prototype v0.1. Last Update: 2026-11-21</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOAL ========== -->
+  <section id="soal" class="screen">
+    <div class="soal-wrap">
+      <div class="card soal-card">
+        <button class="btn-daftar" id="btnDaftar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/></svg>
+          DAFTAR SOAL
+        </button>
+        <div class="badges">
+          <span class="badge-no" id="noLabel">NO.1</span>
+          <span class="badge-time" id="timer">00:00</span>
+        </div>
+
+        <div class="qcard" id="qcard">
+          <p class="qtext" id="qtext"></p>
+          <ul class="opts" id="opts"></ul>
+        </div>
+
+        <div class="nav">
+          <button class="prev" id="btnPrev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 5l-6 7 6 7M18 5l-6 7 6 7"/></svg></button>
+          <button class="reload" id="btnReload" aria-label="Refresh soal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18.5 9A7.5 7.5 0 1 0 19.5 13"/><path d="M14.5 4.2L19 8.6 14.3 10"/></svg></button>
+          <button class="next" id="btnNext" aria-label="Berikutnya"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal: Daftar Soal -->
+<div class="backdrop" id="mDaftar">
+  <div class="modal">
+    <div class="modal-head"><h2>Daftar Soal</h2><button class="x" data-close>&times;</button></div>
+    <div class="modal-body">
+      <div class="grid" id="grid"></div>
+      <div class="legend"><span><i class="d"></i>Sudah dijawab</span><span><i></i>Belum</span><span><i class="c"></i>Posisi sekarang</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Konfirmasi Selesai -->
+<div class="backdrop" id="mSelesai">
+  <div class="modal">
+    <div class="modal-head"><h2>Konfirmasi Selesai Ujian</h2><button class="x" data-close>&times;</button></div>
+    <div class="modal-body">
+      <p>Apakah anda yakin ingin menyelesaikan ujian ? Setelah anda menyelesaikan ujian anda keluar dan <span class="danger">TIDAK DAPAT LAGI MERUBAH JAWABAN</span>.</p>
+      <p id="unanswered" style="display:none"></p>
+      <p>Silakan tekan <span class="ok-text">OK</span> untuk menyelesaikan ujian.</p>
+    </div>
+    <div class="modal-foot"><button class="btn-close" data-close>Close</button><button class="btn-ok" id="btnOk">OK</button></div>
+  </div>
+</div>
+
+<script>
+/* ================= DATA (edit di sini) ================= */
+const AKUN = [
+  { username: "0082895880", password: "2418370", nama: "Peserta Uji Coba" }
+];
+
+const MAPEL = {
+  "KIMIA-XII": {
+    nama: "KIMIA XII",
+    durasiMenit: 90,
+    soal: [
+      { q: "Di antara larutan berikut dengan molalitas yang sama (0,1 m), larutan yang memiliki titik beku paling rendah adalah ....", o: ["Glukosa (C₆H₁₂O₆)", "Urea (CO(NH₂)₂)", "NaCl", "CaCl₂", "Sukrosa (C₁₂H₂₂O₁₁)"], k: 3 },
+      { q: "Larutan urea 0,2 molal dalam air (K<sub>b</sub> air = 0,52 °C/m) akan mendidih pada suhu ....", o: ["100,052 °C", "100,104 °C", "100,208 °C", "100,520 °C", "101,040 °C"], k: 1 },
+      { q: "Tekanan osmotik larutan glukosa 0,1 M pada suhu 27 °C (R = 0,082 L·atm·mol⁻¹·K⁻¹) adalah ....", o: ["0,246 atm", "2,46 atm", "4,92 atm", "7,38 atm", "24,6 atm"], k: 1 },
+      { q: "Menurut hukum Raoult, penurunan tekanan uap larutan berbanding lurus dengan ....", o: ["Molalitas larutan", "Molaritas larutan", "Fraksi mol zat terlarut", "Fraksi mol pelarut", "Massa pelarut"], k: 2 },
+      { q: "Peristiwa berikut yang merupakan penerapan sifat koligatif penurunan titik beku adalah ....", o: ["Penaburan garam untuk mencairkan salju di jalan", "Pemberian cairan infus kepada pasien", "Desalinasi air laut dengan osmosis balik", "Penyerapan air oleh akar tanaman", "Penaburan garam pada lintah"], k: 0 },
+      { q: "Bilangan oksidasi atom Mn dalam senyawa KMnO₄ adalah ....", o: ["+2", "+4", "+5", "+6", "+7"], k: 4 },
+      { q: "Reaksi berikut yang merupakan reaksi redoks adalah ....", o: ["NaOH + HCl → NaCl + H₂O", "AgNO₃ + NaCl → AgCl + NaNO₃", "Zn + CuSO₄ → ZnSO₄ + Cu", "CaCO₃ → CaO + CO₂", "SO₃ + H₂O → H₂SO₄"], k: 2 },
+      { q: "Diketahui E° Zn²⁺/Zn = −0,76 V dan E° Cu²⁺/Cu = +0,34 V. Potensial sel standar untuk sel volta Zn | Zn²⁺ || Cu²⁺ | Cu adalah ....", o: ["0,34 V", "0,42 V", "0,76 V", "1,10 V", "1,52 V"], k: 3 },
+      { q: "Pada sel volta, katode merupakan elektrode tempat terjadinya reaksi ... dan bermuatan ....", o: ["Oksidasi, negatif", "Reduksi, positif", "Oksidasi, positif", "Reduksi, negatif", "Reduksi, netral"], k: 1 },
+      { q: "Pada elektrolisis larutan NaCl dengan elektrode inert (karbon), reaksi yang terjadi di katode adalah ....", o: ["Na⁺ + e⁻ → Na", "2H₂O + 2e⁻ → H₂ + 2OH⁻", "2Cl⁻ → Cl₂ + 2e⁻", "2H₂O → O₂ + 4H⁺ + 4e⁻", "Na → Na⁺ + e⁻"], k: 1 },
+      { q: "Arus listrik 2 A dialirkan ke dalam larutan CuSO₄ selama 965 detik. Massa tembaga (A<sub>r</sub> Cu = 63,5) yang mengendap di katode adalah .... (1 F = 96.500 C)", o: ["0,3175 gram", "0,635 gram", "1,27 gram", "6,35 gram", "12,7 gram"], k: 1 },
+      { q: "Korosi pada pipa besi di dalam tanah dapat dicegah dengan perlindungan katodik, yaitu menghubungkan pipa dengan logam ....", o: ["Tembaga (Cu)", "Perak (Ag)", "Magnesium (Mg)", "Timah (Sn)", "Timbal (Pb)"], k: 2 },
+      { q: "Gas mulia yang paling melimpah di atmosfer bumi adalah ....", o: ["Helium", "Neon", "Argon", "Kripton", "Xenon"], k: 2 },
+      { q: "Unsur halogen yang memiliki daya oksidasi paling kuat adalah ....", o: ["F₂", "Cl₂", "Br₂", "I₂", "At₂"], k: 0 },
+      { q: "Pembuatan amonia (NH₃) dalam skala industri dilakukan melalui proses ....", o: ["Kontak", "Haber-Bosch", "Hall-Héroult", "Frasch", "Down"], k: 1 },
+      { q: "Nama IUPAC dari senyawa CH₃–CH₂–CH(CH₃)–CH₂–OH adalah ....", o: ["3-metil-1-butanol", "2-metil-1-butanol", "2-metil-2-butanol", "3-metil-2-butanol", "2-etil-1-propanol"], k: 1 },
+      { q: "Alkohol berisomer fungsi dengan golongan senyawa ....", o: ["Aldehid", "Keton", "Eter", "Ester", "Asam karboksilat"], k: 2 },
+      { q: "Senyawa berikut yang memberikan hasil positif (cermin perak) dengan pereaksi Tollens adalah ....", o: ["Propanon", "Propanal", "2-propanol", "Metoksietana", "Asam propanoat"], k: 1 },
+      { q: "Senyawa turunan benzena dengan rumus C₆H₅–OH diberi nama ....", o: ["Toluena", "Anilina", "Fenol", "Asam benzoat", "Nitrobenzena"], k: 2 },
+      { q: "Polimer berikut yang terbentuk melalui reaksi polimerisasi kondensasi adalah ....", o: ["Polietilena", "PVC", "Teflon", "Nilon", "Polipropilena"], k: 3 },
+      { q: "Sebanyak 18 gram glukosa (M<sub>r</sub> = 180) dilarutkan dalam 90 gram air (M<sub>r</sub> = 18). Fraksi mol glukosa dalam larutan tersebut adalah ....", o: ["0,0196", "0,1000", "0,1961", "0,5000", "0,9804"], k: 0 },
+      { q: "Sebanyak 6 gram urea (M<sub>r</sub> = 60) dilarutkan dalam 500 gram air (K<sub>f</sub> air = 1,86 °C/m). Titik beku larutan tersebut adalah ....", o: ["−0,186 °C", "−0,372 °C", "−0,744 °C", "−1,860 °C", "−3,720 °C"], k: 1 },
+      { q: "Dua larutan yang memiliki tekanan osmotik sama disebut larutan ....", o: ["Hipertonik", "Hipotonik", "Isotonik", "Isoelektrik", "Ideal"], k: 2 },
+      { q: "Faktor van't Hoff (i) untuk Al₂(SO₄)₃ yang terionisasi sempurna dalam air adalah ....", o: ["2", "3", "4", "5", "6"], k: 3 },
+      { q: "Pada reaksi redoks dalam suasana asam: MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺, setelah disetarakan, koefisien Fe²⁺ untuk setiap 1 ion MnO₄⁻ adalah ....", o: ["1", "2", "3", "4", "5"], k: 4 },
+      { q: "Pada reaksi Zn + 2HCl → ZnCl₂ + H₂, zat yang bertindak sebagai reduktor adalah ....", o: ["Zn", "HCl", "ZnCl₂", "H₂", "Cl⁻"], k: 0 },
+      { q: "Berdasarkan deret volta, logam berikut yang TIDAK dapat bereaksi dengan larutan HCl encer adalah ....", o: ["Mg", "Zn", "Fe", "Cu", "Al"], k: 3 },
+      { q: "Pada sel volta dengan notasi Mg | Mg²⁺ || Ag⁺ | Ag, yang bertindak sebagai anode adalah ....", o: ["Mg", "Mg²⁺", "Ag", "Ag⁺", "Jembatan garam"], k: 0 },
+      { q: "Pada elektrolisis leburan (lelehan) NaCl dengan elektrode inert, zat yang dihasilkan di katode adalah ....", o: ["Gas H₂", "Gas Cl₂", "Logam Na", "Gas O₂", "Larutan NaOH"], k: 2 },
+      { q: "Pada elektrolisis larutan Na₂SO₄ dengan elektrode platina, zat yang dihasilkan di anode adalah ....", o: ["Gas H₂", "Gas O₂", "Logam Na", "Gas SO₂", "Gas SO₃"], k: 1 },
+      { q: "Pada proses penyepuhan (electroplating) sendok besi dengan perak, sendok besi dipasang sebagai ....", o: ["Anode", "Katode", "Jembatan garam", "Elektrolit", "Anode dan katode"], k: 1 },
+      { q: "Dalam golongan alkali (IA) dari Li ke Cs, sifat yang semakin bertambah besar adalah ....", o: ["Energi ionisasi", "Keelektronegatifan", "Jari-jari atom", "Titik leleh", "Kekerasan logam"], k: 2 },
+      { q: "Unsur periode 3 yang hidroksidanya bersifat amfoter adalah ....", o: ["Na", "Mg", "Al", "P", "S"], k: 2 },
+      { q: "Asam sulfat (H₂SO₄) dalam industri dibuat melalui proses ....", o: ["Haber-Bosch", "Kontak", "Frasch", "Solvay", "Down"], k: 1 },
+      { q: "Kesadahan sementara pada air disebabkan oleh adanya garam ....", o: ["CaCl₂", "CaSO₄", "Ca(HCO₃)₂", "MgCl₂", "MgSO₄"], k: 2 },
+      { q: "Oksidasi 2-propanol dengan larutan K₂Cr₂O₇ dalam suasana asam menghasilkan ....", o: ["Propanal", "Propanon", "Asam propanoat", "Propena", "Metoksietana"], k: 1 },
+      { q: "Reaksi antara asam asetat (asam etanoat) dan etanol dengan katalis H₂SO₄ pekat menghasilkan ester ....", o: ["Metil asetat", "Etil asetat", "Etil propanoat", "Metil propanoat", "Asetaldehid"], k: 1 },
+      { q: "Reaksi benzena dengan HNO₃ pekat dengan katalis H₂SO₄ pekat menghasilkan nitrobenzena. Reaksi tersebut disebut reaksi ....", o: ["Adisi", "Nitrasi", "Sulfonasi", "Alkilasi", "Halogenasi"], k: 1 },
+      { q: "Monomer penyusun protein adalah ....", o: ["Glukosa", "Asam amino", "Asam lemak", "Nukleotida", "Gliserol"], k: 1 },
+      { q: "Uji biuret digunakan untuk mengidentifikasi adanya ....", o: ["Amilum", "Glukosa", "Ikatan peptida", "Lemak", "Cincin benzena"], k: 2 }
+    ]
+  }
+};
+/* ======================================================= */
+
+const KEY = "cbt_sesi_v1", HIST = "cbt_riwayat_v1";
+const $ = id => document.getElementById(id);
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+let sesi = null, tick = null;
+
+// isi pilihan mapel
+const sel = $("mapel");
+Object.entries(MAPEL).forEach(([id,m]) => sel.add(new Option(m.nama, id)));
+sel.addEventListener("change", () => sel.classList.toggle("placeholder", !sel.value));
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s => s.classList.toggle("active", s.id === id));
+  window.scrollTo(0,0);
+}
+function alertMsg(t){ const a=$("loginAlert"); a.textContent=t||""; a.classList.toggle("show", !!t); }
+
+/* ---------- LOGIN ---------- */
+$("loginForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const u=$("username").value.trim(), p=$("password").value, m=sel.value;
+  if(!u || !p) return alertMsg("Username dan kata sandi wajib diisi.");
+  if(!m) return alertMsg("Silakan pilih mata pelajaran terlebih dahulu.");
+  const akun = AKUN.find(a => a.username===u && a.password===p);
+  if(!akun) return alertMsg("Username atau kata sandi salah.");
+  alertMsg("");
+  sesi = { user:u, mapel:m, idx:0, jawab:{}, selesaiPada: Date.now() + MAPEL[m].durasiMenit*60000 };
+  store.set(KEY, sesi);
+  mulai();
+});
+
+/* ---------- SOAL ---------- */
+function soalList(){ return MAPEL[sesi.mapel].soal; }
+
+function render(){
+  const list = soalList(), s = list[sesi.idx], n = sesi.idx+1, last = n===list.length;
+  $("noLabel").textContent = "NO." + n;
+  $("qtext").innerHTML = s.q;
+  const ul = $("opts"); ul.innerHTML = "";
+  s.o.forEach((txt,i) => {
+    const li = document.createElement("li");
+    if(sesi.jawab[sesi.idx]===i) li.className="sel";
+    li.innerHTML = `<span class="circle">${"ABCDE"[i]}</span><span>${txt}</span>`;
+    li.onclick = () => { sesi.jawab[sesi.idx]=i; store.set(KEY,sesi); render(); };
+    ul.appendChild(li);
+  });
+  $("btnPrev").disabled = sesi.idx===0;
+  const nx = $("btnNext");
+  nx.classList.toggle("finish", last);
+  nx.setAttribute("aria-label", last ? "Selesai" : "Berikutnya");
+  nx.innerHTML = last
+    ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 13l4 4 8-9M10 15l2 2 9-10"/></svg>'
+    : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 5l6 7-6 7M6 5l6 7-6 7"/></svg>';
+}
+
+function go(i){ sesi.idx=i; store.set(KEY,sesi); render(); window.scrollTo(0,0); }
+$("btnPrev").onclick = () => { if(sesi.idx>0) go(sesi.idx-1); };
+$("btnNext").onclick = () => {
+  if(sesi.idx < soalList().length-1) go(sesi.idx+1);
+  else bukaSelesai();
+};
+$("btnReload").onclick = () => {
+  const c=$("qcard"); c.classList.add("loading");
+  setTimeout(() => { render(); c.classList.remove("loading"); }, 350);
+};
+
+/* ---------- TIMER (JJ:MM, titik dua berkedip) ---------- */
+function updateTimer(){
+  const sisa = Math.max(0, sesi.selesaiPada - Date.now());
+  const menit = Math.ceil(sisa/60000);
+  const jj = String(Math.floor(menit/60)).padStart(2,"0"), mm = String(menit%60).padStart(2,"0");
+  const blink = Math.floor(Date.now()/1000)%2===1;
+  $("timer").textContent = jj + (blink ? " " : ":") + mm;
+  if(sisa<=0) selesai(true);
+}
+
+function mulai(){
+  show("soal"); render(); updateTimer();
+  clearInterval(tick); tick = setInterval(updateTimer, 500);
+}
+
+/* ---------- MODAL ---------- */
+function openM(id){ $(id).classList.add("show"); }
+function closeM(id){ $(id).classList.remove("show"); }
+document.querySelectorAll(".backdrop").forEach(b => {
+  b.addEventListener("click", e => { if(e.target===b || e.target.hasAttribute("data-close")) closeM(b.id); });
+});
+
+$("btnDaftar").onclick = () => {
+  const g=$("grid"); g.innerHTML="";
+  soalList().forEach((_,i) => {
+    const b=document.createElement("button");
+    b.textContent=i+1;
+    if(sesi.jawab[i]!==undefined) b.classList.add("done");
+    if(i===sesi.idx) b.classList.add("cur");
+    b.onclick=()=>{ closeM("mDaftar"); go(i); };
+    g.appendChild(b);
+  });
+  openM("mDaftar");
+};
+
+function bukaSelesai(){
+  const kosong = soalList().length - Object.keys(sesi.jawab).length;
+  const p=$("unanswered");
+  p.style.display = kosong ? "block" : "none";
+  p.textContent = kosong ? `Masih ada ${kosong} soal yang belum dijawab.` : "";
+  openM("mSelesai");
+}
+$("btnOk").onclick = () => selesai(false);
+
+/* ---------- SELESAI → kembali ke login ---------- */
+function selesai(waktuHabis){
+  clearInterval(tick);
+  if(!sesi) return;
+  const riwayat = store.get(HIST) || [];
+  riwayat.push({ user:sesi.user, mapel:sesi.mapel, jawab:sesi.jawab, waktu:new Date().toISOString(), waktuHabis });
+  store.set(HIST, riwayat);
+  store.del(KEY); sesi=null;
+  closeM("mSelesai"); closeM("mDaftar");
+  $("loginForm").reset(); sel.classList.add("placeholder"); alertMsg("");
+  show("login");
+}
+
+/* ---------- lanjutkan sesi kalau app sempat tertutup ---------- */
+const lama = store.get(KEY);
+if(lama && MAPEL[lama.mapel]){ sesi = lama; mulai(); }
+
+/* ---------- PWA ---------- */
+if("serviceWorker" in navigator){
+  window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(()=>{}); });
+}
+</script>
+</body>
+</html>
